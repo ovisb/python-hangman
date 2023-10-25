@@ -30,8 +30,13 @@ To add...
 25.10.2023
 - Stage1 done
 
+25.10.2023
+- started stage2
+- added input from user and check for predefined(temporary) winner
+- added stage2 unit tests
+
 #### Project status
-...
+Completed stages 2/5
 
 #### Install steps
 

@@ -1,13 +1,18 @@
-"""Hello module"""
+"""Hangman module"""
 
 
-def hello(name: str) -> str:
-    """Function which returns friendly hello {name} message.
-
-    Args:
-        name (str): Name
-
-    Returns:
-        str: Hello message
+def get_input(message: str) -> str:
     """
-    return f"Hello {name}"
+    @param message: text message
+    @return: word
+    """
+    return input(message)
+
+
+def check_winner(user_word: str) -> bool:
+    """
+    @param user_word: Input word from the user
+    @return: check if user word is a winner
+    """
+    winner = "python"  # temporary
+    return user_word == winner
