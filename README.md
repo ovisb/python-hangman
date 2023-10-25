@@ -1,4 +1,34 @@
-# Python Project 'python_hangman'
+# EDU project
+
+## Project
+
+This is _Hangman_ project that is part of Hyperskill platform from Jetbrains Academy.
+
+'Python Core' track
+
+## Technologies and tools used
+
+- Python 3.12
+- pytest
+- mypy
+- isort
+- black
+- flake8
+- make
+
+## Project description
+
+_Hangman_ is a simple Python cli game.
+
+To add...
+
+## Changelog
+
+25.10.2023
+- Initial github repo creation + project structure
+
+#### Project status
+...
 
 #### Install steps
 
