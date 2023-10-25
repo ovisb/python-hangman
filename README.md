@@ -35,6 +35,12 @@ To add...
 - added input from user and check for predefined(temporary) winner
 - added stage2 unit tests
 
+25.10.2023
+- started stage3
+- now the winner gets picked up randomly via random module
+- the word inputed by the user gets checked against the random winner
+- added stage3 unit tests
+
 #### Project status
 Completed stages 2/5
 
