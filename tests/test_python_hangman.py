@@ -1,6 +1,13 @@
 import io
 
-from python_hangman.python_hangman import check_winner, get_input, get_random_winner
+import pytest
+
+from python_hangman.python_hangman import (
+    check_winner,
+    get_input,
+    get_random_winner,
+    hint,
+)
 
 
 def test_get_input(monkeypatch):
@@ -19,3 +26,19 @@ def test_check_not_winner():
 def test_random_winner():
     possible_winners = ["python", "java", "swift", "javascript"]
     assert get_random_winner() in possible_winners
+
+
+@pytest.mark.parametrize(
+    "winner, expected",
+    [
+        ("python", "pyt---"),
+        ("java", "jav-"),
+        ("swift", "swi--"),
+        ("", ""),
+        ("s", "s"),
+        ("py", "py"),
+        ("pyt", "pyt"),
+    ],
+)
+def test_hint(winner, expected):
+    assert hint(winner) == expected

@@ -41,8 +41,14 @@ To add...
 - the word inputed by the user gets checked against the random winner
 - added stage3 unit tests
 
+25.10.2023
+- started stage4
+- Added function which returns the first 3 characters from the winner word and hides the remaining ones
+- This is a hint presented to the user like `Guess the word swi--:`
+- added stage 4 unit tests
+
 #### Project status
-Completed stages 3/5
+Completed stages 4/5
 
 #### Install steps
 

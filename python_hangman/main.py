@@ -1,14 +1,21 @@
 """Main module"""
-from python_hangman import check_winner, get_input, get_random_winner  # type: ignore
+from python_hangman import (  # type: ignore
+    check_winner,
+    get_input,
+    get_random_winner,
+    hint,
+)
 
 
 def main() -> None:
     """Main function"""
     print("H A N G M A N")
 
-    user_word = get_input("Guess the word: ")
-
     winner = get_random_winner()
+
+    winner_hint = hint(winner)
+
+    user_word = get_input(f"Guess the word {winner_hint}: ")
 
     if check_winner(user_word, winner):
         print("You survived!")
