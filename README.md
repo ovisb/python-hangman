@@ -42,7 +42,7 @@ To add...
 - added stage3 unit tests
 
 #### Project status
-Completed stages 2/5
+Completed stages 3/5
 
 #### Install steps
 
