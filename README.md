@@ -27,6 +27,9 @@ To add...
 25.10.2023
 - Initial github repo creation + project structure
 
+25.10.2023
+- Stage1 done
+
 #### Project status
 ...
 

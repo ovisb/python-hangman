@@ -4,9 +4,8 @@ from python_hangman import hello  # type: ignore
 
 def main() -> None:
     """Main function"""
-    name = input("Enter your name: ")
-
-    print(hello(name))
+    print("H A N G M A N")
+    print("The game will be available soon.")
 
 
 if __name__ == "__main__":
