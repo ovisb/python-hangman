@@ -50,6 +50,9 @@ source = ["python_hangman"]
 [tool.coverage.report]
 show_missing = true
 omit = [ "*__init__*", "*main.py*" ]
+exclude_also = [
+    "def print_game_state"
+]
 
 [build-system]
 requires = ["poetry-core"]

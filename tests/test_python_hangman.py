@@ -7,6 +7,7 @@ from python_hangman.python_hangman import (
     get_input,
     get_random_winner,
     hint,
+    update_letter_list,
 )
 
 
@@ -42,3 +43,19 @@ def test_random_winner():
 )
 def test_hint(winner, expected):
     assert hint(winner) == expected
+
+
+@pytest.mark.parametrize(
+    "winner_tpl, expected",
+    [
+        (("python", "p"), "p-----"),
+        (("python", "t"), "--t---"),
+        (("java", "a"), "-a-a"),
+        (("java", "j"), "j---"),
+    ],
+)
+def test_update_letter_list(winner_tpl, expected):
+    winner, letter = winner_tpl
+    winner_hidden = ["-"] * len(winner)
+    update_letter_list(winner, letter, winner_hidden)
+    assert "".join(winner_hidden) == expected

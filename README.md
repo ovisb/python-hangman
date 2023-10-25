@@ -38,7 +38,7 @@ To add...
 25.10.2023
 - started stage3
 - now the winner gets picked up randomly via random module
-- the word inputed by the user gets checked against the random winner
+- the word added by the user gets checked against the random winner
 - added stage3 unit tests
 
 25.10.2023
@@ -47,8 +47,17 @@ To add...
 - This is a hint presented to the user like `Guess the word swi--:`
 - added stage 4 unit tests
 
+25.10.2023
+- started stage5
+- main login was refactored, stage3 hint excluded/removed
+- added main game loop
+  - it provided the user with 8 tries
+  - the winner word is now hidden, it contains dashes instead of letters
+  - now user inputs a letter instead of a word
+  - letter is checked to see if it's part of the winner word
+  - if true, we update the hidden word with the correct letter
 #### Project status
-Completed stages 4/5
+Completed stages 5/5
 
 #### Install steps
 

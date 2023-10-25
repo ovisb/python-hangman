@@ -11,6 +11,7 @@ def get_input(message: str) -> str:
     return input(message)
 
 
+# not used
 def check_winner(user_word: str, winner: str) -> bool:
     """
     Check if user_word is winner
@@ -30,6 +31,7 @@ def get_random_winner() -> str:
     return random.choice(possible_winners)
 
 
+# not used
 def hint(winner: str) -> str:
     """
     Return hint for the user, show only the first 3 characters
@@ -39,3 +41,22 @@ def hint(winner: str) -> str:
     hint_range = 3
     chars = [letter if idx < hint_range else "-" for idx, letter in enumerate(winner)]
     return "".join(chars)
+
+
+def update_letter_list(winner: str, user_letter: str, winner_hidden: list[str]) -> None:
+    """
+    Update winning hidden list with the user letter
+    @param winner: chosen winner word
+    @param user_letter: input letter from the user
+    @param winner_hidden: hidden list of the winning letters
+    """
+    start = 0
+    found_letter_count = winner.count(user_letter)
+    for _ in range(found_letter_count):
+        idx = winner.index(user_letter, start)
+        winner_hidden[idx] = user_letter
+        start = idx + 1
+
+
+def print_game_state(winner_hidden: list[str]) -> None:
+    print("".join(winner_hidden))
