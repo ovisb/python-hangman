@@ -58,5 +58,14 @@ def update_letter_list(winner: str, user_letter: str, winner_hidden: list[str]) 
         start = idx + 1
 
 
+def has_won(winner_hidden: list[str]) -> bool:
+    """
+    Check if there is a winner
+    @param winner_hidden: hidden list of the winning letters
+    @return: True if winner else False
+    """
+    return winner_hidden.count("-") == 0
+
+
 def print_game_state(winner_hidden: list[str]) -> None:
     print("".join(winner_hidden))

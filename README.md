@@ -56,8 +56,13 @@ To add...
   - now user inputs a letter instead of a word
   - letter is checked to see if it's part of the winner word
   - if true, we update the hidden word with the correct letter
+
+27.10.2023
+- started stage6
+- Now if the user gets a letter right he gets a free try
+
 #### Project status
-Completed stages 5/5
+Completed stages 6/8
 
 #### Install steps
 

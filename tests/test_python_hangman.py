@@ -6,6 +6,7 @@ from python_hangman.python_hangman import (
     check_winner,
     get_input,
     get_random_winner,
+    has_won,
     hint,
     update_letter_list,
 )
@@ -43,6 +44,19 @@ def test_random_winner():
 )
 def test_hint(winner, expected):
     assert hint(winner) == expected
+
+
+@pytest.mark.parametrize(
+    "winner, expected",
+    [
+        ("python", True),
+        ("java", True),
+        ("sw---", False),
+        ("pyt---", False),
+    ],
+)
+def test_has_won(winner, expected):
+    assert has_won(list(winner)) == expected
 
 
 @pytest.mark.parametrize(
