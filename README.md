@@ -75,10 +75,11 @@ Have fun!
 29.10.2023
 - started stage 8
 - added game main menu
-#### Project status
+- 
+## Project status
 Completed stages 8/8
 
-#### Install steps
+### Install steps
 
 Install everything (main + dev packages except optional groups)
 
@@ -113,7 +114,7 @@ poetry run pre-commit run --all-files
 poetry run pre-commit run --hook-stage push -v
 ```
 
-#### Makefile
+### Makefile
 
 Added 'Makefile' to make it easy to validate files
 Check bellow command on usage
