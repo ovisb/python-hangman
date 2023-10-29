@@ -28,27 +28,27 @@ To add...
 - Initial github repo creation + project structure
 
 25.10.2023
-- Stage1 done
+- Stage 1 done
 
 25.10.2023
-- started stage2
+- started stage 2
 - added input from user and check for predefined(temporary) winner
 - added stage2 unit tests
 
 25.10.2023
-- started stage3
+- started stage 3
 - now the winner gets picked up randomly via random module
 - the word added by the user gets checked against the random winner
 - added stage3 unit tests
 
 25.10.2023
-- started stage4
+- started stage 4
 - Added function which returns the first 3 characters from the winner word and hides the remaining ones
 - This is a hint presented to the user like `Guess the word swi--:`
 - added stage 4 unit tests
 
 25.10.2023
-- started stage5
+- started stage 5
 - main login was refactored, stage3 hint excluded/removed
 - added main game loop
   - it provided the user with 8 tries
@@ -58,11 +58,16 @@ To add...
   - if true, we update the hidden word with the correct letter
 
 27.10.2023
-- started stage6
+- started stage 6
 - Now if the user gets a letter right he gets a free try
 
+29.10.2023
+- started stage 7
+- added function for validating user input.
+- now users try will not count as a mistake if any of the exceptions are raised
+
 #### Project status
-Completed stages 6/8
+Completed stages 7/8
 
 #### Install steps
 

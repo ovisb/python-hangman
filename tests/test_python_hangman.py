@@ -9,12 +9,22 @@ from python_hangman.python_hangman import (
     has_won,
     hint,
     update_letter_list,
+    validate_inp,
 )
 
 
 def test_get_input(monkeypatch):
-    monkeypatch.setattr("sys.stdin", io.StringIO("python\n"))
-    assert get_input("") == "python"
+    monkeypatch.setattr("sys.stdin", io.StringIO("p\n"))
+    assert get_input("") == "p"
+
+
+@pytest.mark.parametrize(
+    "user_input",
+    ["12", "", "as", "9", "0", "-1", "A", "lT"],
+)
+def test_error(user_input):
+    with pytest.raises(Exception):
+        validate_inp(user_input)
 
 
 def test_check_winner():

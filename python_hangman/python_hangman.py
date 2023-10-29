@@ -2,13 +2,24 @@
 import random
 
 
+def validate_inp(user_input: str):
+    if not user_input or len(user_input) > 1:
+        raise Exception("Please, input a single letter.")
+
+    if not user_input.islower() or user_input.isnumeric():
+        raise Exception("Please, enter a lowercase letter from the English alphabet.")
+
+
 def get_input(message: str) -> str:
     """
     Get input from the user
     @param message: text message
     @return: word
     """
-    return input(message)
+    user_input = input(message)
+    validate_inp(user_input)
+
+    return user_input
 
 
 # not used
