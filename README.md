@@ -18,9 +18,14 @@ This is _Hangman_ project that is part of Hyperskill platform from Jetbrains Aca
 
 ## Project description
 
-_Hangman_ is a simple Python cli game.
+This is the classic _Hangman_ game. The game has a main menu where player can choose from:
+ - play the game
+ - show number of game wins and loses
+ - exit
 
-To add...
+In each round one word is chosen randomly by the computer and round ends if user has used all 8 tries or has won.
+
+Have fun!
 
 ## Changelog
 
@@ -65,9 +70,13 @@ To add...
 - started stage 7
 - added function for validating user input.
 - now users try will not count as a mistake if any of the exceptions are raised
+- added stage 7 unit tests
 
+29.10.2023
+- started stage 8
+- added game main menu
 #### Project status
-Completed stages 7/8
+Completed stages 8/8
 
 #### Install steps
 

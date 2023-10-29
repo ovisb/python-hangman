@@ -79,4 +79,57 @@ def has_won(winner_hidden: list[str]) -> bool:
 
 
 def print_game_state(winner_hidden: list[str]) -> None:
+    """
+    Print stage hangman
+    @param winner_hidden: hidden list of the winning letters
+    """
     print("".join(winner_hidden))
+
+
+def play(win_lose: dict) -> None:
+    """
+    Play hangman
+    @param win_lose: dict containing player number of wins and loses
+    """
+    max_attempts = 8
+    winner = get_random_winner()
+    winner_set = set(winner)
+    user_guesses: list[str] = []
+    winner_hidden = ["-"] * len(winner)
+
+    while max_attempts > 0:
+        print_game_state(winner_hidden)
+
+        try:
+            user_letter = get_input("Input a letter: ")
+        except KeyboardInterrupt:
+            print("Bye")
+            return
+        except EOFError:
+            print("Bye")
+            return
+        except Exception as e:
+            print(e)
+            continue
+
+        if user_letter in winner_hidden or user_letter in user_guesses:
+            print("You've already guessed this letter")
+            continue
+        elif user_letter in winner_set:
+            update_letter_list(winner, user_letter, winner_hidden)
+
+            if has_won(winner_hidden):
+                print(f"You guessed the word {winner}!")
+                print("You survived!")
+                win_lose["win"] += 1
+                return
+            max_attempts += 1
+        else:
+            print("That letter doesn't appear in the word.")
+
+        user_guesses.append(user_letter)
+        max_attempts -= 1
+        print()
+
+    print("You lost!")
+    win_lose["lose"] += 1
